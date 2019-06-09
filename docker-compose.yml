@@ -1,0 +1,21 @@
+version: '3.4'
+
+services:
+  redis-server:
+        image: redis
+        container_name: redis-server
+        expose:
+         - 6379 
+
+  device-registry:
+        links:
+         - redis-server
+        environment:
+         - REDIS_URL=redis-server://redis-server
+        build: .
+        volumes:
+         - .:/usr/src/app
+        ports:
+         - 5000:80
+
+ 
