@@ -14,7 +14,8 @@
 		"device_type": "switch",
 		"controller_gateway": "192.168.0.5
 	}
-]```
+]
+```
 
 **`POST /devices`**
 
@@ -24,7 +25,8 @@
         "name": "Bedroom Heater",
         "device_type": "switch",
         "controller_gateway": "192.168.0.5
-}```
+}
+```
 
 - `201 OK`
 
